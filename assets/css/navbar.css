@@ -1,0 +1,36 @@
+/* NavBar **/
+.navbar  {
+    background-color: var(--bs-light) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.navbar .navbar-brand {
+    width: 18%;
+}
+
+.navbar .navbar-brand img{
+    width: 100%;
+}
+
+/* VISTA TABLET */
+@media (min-width: 768px) { 
+    .navbar .navbar-brand {
+        width: 8%;
+    }
+}
+
+/* VISTA DESKTOP */
+@media (min-width: 992px) {
+    .navbar .navbar-brand {
+        width: 4%;
+    }
+  }
+  
+
+/* VISTA DESKTOP XXL */
+@media (min-width: 1440px) {
+
+    .navbar .navbar-brand {
+        width: 4%;
+    }
+  }

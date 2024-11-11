@@ -1,0 +1,367 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Icons bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  --bs-primary: #3EC2B4;
+  --bs-primary-tint1: #7DC9BD;
+  --bs-primary-tint2: #9BD6CE;
+  --bs-primary-tint3: #BBE4DE;
+  --bs-primary-tint4: #DFF2EF;
+  --bs-dark: #000000;
+  --bs-light: #ffffff;
+  --bs-gray-dusk: #545860;
+  --bs-gray-dusk-light: #F5F5F5;
+  --bs-text-dark: #000000;
+  --bs-text-light: #ffffff;
+  --bs-text-dusk: #53565A;
+  --fonts: "Montserrat", sans-serif;
+}
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--fonts);
+  color: var(--text);
+}
+
+.text-primary {
+  --bs-text-opacity: 1;
+  color: var(--bs-primary) !important;
+}
+
+.text-bg-primary {
+  color: #fff !important;
+  background-color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: var(--bs-primary) !important;
+}
+
+.bg-dusk-light {
+  --bs-bg-opacity: 1;
+  background-color: var(--bs-gray-dusk-light) !important;
+}
+
+.text-sm {
+  font-size: 13px;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+#root {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main-content";
+}
+
+nav {
+  grid-area: nav;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--bs-primary);
+  color: var(--bs-text-light);
+  position: relative;
+}
+
+header .border {
+  width: 20%;
+  border-width: 1.5px !important;
+}
+
+header .header-img {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 80%;
+}
+
+
+.app-title {
+  margin-top: 250px;
+  padding: 48px 16px;
+}
+
+.app-title .app-img {
+  width: 40%;
+}
+
+main {
+  grid-area: main-content;
+}
+
+/* Lista */
+.select-payment .list-group-item {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.316);
+  color: var(--bs-light);
+}
+
+.select-payment .list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: var(--bs-text-dark);
+  background-color: var(--bs-gray-dusk-light);
+  border-color: var(--bs-list-group-border-color);
+}
+
+.list-group-item.active .d-flex:last-child {
+  color: var(--bs-primary);
+}
+
+/* Formulario */
+.payment-item:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-item .payment-img {
+  width: 30%;
+  filter: brightness(0) invert(1);
+}
+
+.payment-item .payment-img img {
+  width: 100%;
+}
+
+.payment-detail {
+  position: relative;
+
+}
+
+.payment-detail .payment-forma {
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.disabled-payment {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary-tint1);
+}
+
+.form-check-input:focus,
+.form-check-input:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* Modal */
+
+.modal-content {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* .modal-body {
+
+  background-color: red;
+  margin: 0 auto;
+  z-index: 1;
+} */
+
+.modal-body .modal-logo {
+  width: 30%;
+  margin: 0 auto;
+
+}
+
+.modal-img {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 40%;
+  z-index: 0;
+}
+
+.modal-img-2 {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 20%;
+  z-index: 0;
+}
+
+/* VISTA TABLET */
+@media (min-width: 768px) {
+  header .header-img {
+    left: -110px;
+    width: 55%;
+  }
+
+  .app-title {
+    margin-top: 370px;
+  }
+
+  .app-title .app-img {
+    width: 16%;
+  }
+
+  .modal-body .modal-logo {
+    width: 20%;
+  
+  }
+  
+  .modal-img {
+    top: -80px;
+    left: -80px;
+    width: 40%;
+  }
+  
+  .modal-img-2 {
+    bottom: -30px;
+    right: -30px;
+    width: 20%;
+  }
+}
+
+/* VISTA DESKTOP */
+@media (min-width: 992px) {
+  #root {
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    grid-template-areas:
+      "header nav"
+      "header main-content";
+  }
+
+  header {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  header .header-img {
+    position: absolute;
+    top: 0;
+    left: -110px;
+    width: 85%;
+    z-index: -1;
+  }
+
+  .app-title {
+    margin-top: 200px;
+    padding: 0 16px;
+  }
+
+
+  .app-title .app-img {
+    width: 25%;
+  }
+
+  .fs-3 {
+    font-size: 24px !important;
+  }
+
+  .fs-4 {
+    font-size: 20px !important;
+  }
+
+  main {
+    grid-area: main-content;
+    height: calc(100vh - 72px);
+    overflow: auto;
+  }
+
+  .contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .contenido-title {
+    grid-column: 1 / -1;
+  }
+
+
+  .modal-body {
+    /* background-color: red; */
+    width: 80%;
+    margin: 0 auto;
+    z-index: 1;
+  }
+}
+
+/* VISTA DESKTOP */
+@media (min-width: 1280px) {
+  header .header-img {
+    left: -110px;
+    width: 90%;
+  }
+
+  .app-title {
+    padding: 0 32px;
+  }
+}
+
+/* VISTA DESKTOP XXL */
+@media (min-width: 1440px) {
+  #root {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas:
+      "header nav"
+      "header main-content";
+  }
+
+  .contenido {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  header .header-img {
+    width: 85%;
+  }
+
+  .app-title {
+    margin-top: 130px;
+    padding: 0 72px;
+  }
+
+  .fs-3 {
+    font-size: 28px !important;
+  }
+
+  .fs-4 {
+    font-size: 24px !important;
+  }
+}
+
