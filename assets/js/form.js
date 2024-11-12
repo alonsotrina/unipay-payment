@@ -12,11 +12,11 @@
       const selectedValue = document.querySelector('input[name="listGroupRadio"]:checked').value;
       console.log('valorrrr',selectedValue);
 
-      paymentTotal.innerHTML = selectedValue;
+      // paymentTotal.innerHTML = selectedValue;
 
 
       if (document.querySelector('input[name="listGroupRadio"]:checked')) {
-        contentPayment.classList.remove('disabled-payment');
+        contentPayment.classList.remove('disabled');
       }
     });
   });

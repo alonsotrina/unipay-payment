@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment error</title>
+  <!-- Reset Css -->
+  <link rel="stylesheet" href="assets/css/Reboot.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Icons -->
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Css -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/button.css" />
+  <link rel="stylesheet" href="assets/css/payment.css" />
+  <link rel="stylesheet" href="assets/css/payment-success.css" />
+</head>
+
+<body>
+  <div id="root">
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div class="app-title">
+          <h2 class="fs-4 fw-light mb-1">Resumen de Pago Seleccionado</h2>
+          <h3 class="fs-3 fw-bold mb-2">Selecciona y Organiza tus Deudas</h3>
+          <img class="app-img mt-3" src="assets/img/logos/logo-unipay.png" alt="">
+        </div>
+      </div>
+
+      <img class="header-img" src="assets/img/header/Mask group-5.png" alt="">
+    </header>
+
+
+    <main>
+      <div class="container payment-succes px-4 pt-md-5">
+        <div class="centered-div">
+          <div class="contenido-title text-center mt-5 mt-md-4 mb-4">
+              <h2 class="fs-4 fw-semibold text-danger">
+                Error en el pago
+              </h2>
+              <h3 class="fs-6 fw-light mt-3">
+                Hubo un problema al procesar tu pago. Por favor, verifica la información e intenta nuevamente.
+              </h3>
+              <p class="text-sm text-muted mt-2">
+                Fecha actual: <span id="fecha-actual"></span>
+              </p>
+          </div>
+
+          <!-- call action -->
+          <div class="payment-action bg-danger rounded-top-2 py-5">
+            <i class="bi bi-x-circle text-light payment-icon"></i>
+
+            <p class="fs-6 text-light fw-semibold">Hubo un problema al procesar el pago</p>
+            <p class="fs-6 text-light fw-semibold mb-3">Intenta nuevamente más tarde</p>
+
+            <a href="index.html" class="btn btn-dark fw-semibold  mt-4" role="button">
+              Volver a unipay
+            </a>
+
+            <!-- img forma -->
+            <img class="payment-bottom" src="assets/img/forma/formar-2.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <div class="modal fade" id="paymentSuccess" tabindex="-1" aria-labelledby="paymentSuccess" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-l">
+      <div class="modal-content bg-primary">
+        <div class="modal-header border-0">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center mb-5">
+          <!-- logo-unipay -->
+          <img class="modal-logo mb-4" src="assets/img/logos/logo-unipay.png" alt="logo unipay">
+
+          <!-- <i class="bi bi-check-circle icon-success text-light"></i> -->
+          <h5 class="fs-5 fw-bold text-light mb-2">
+            ¡Pago realizado con éxito!
+          </h5>
+          <p class="fs-6 fw-normal text-light mb-4">
+            Tu pago se ha registrado correctamente. A continuación, puedes revisar los detalles.
+          </p>
+
+          <div class="select-payment rounded-2">
+            <div class="list-payment">
+              <div class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                  <span class="text-sm fw-medium">Número de transaccion:</span>
+                  <span class="text-sm fw-medium">123456789</span>
+                </li>
+  
+                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                  <span class="text-sm fw-medium">Codigo de autorizacion:</span>
+                  <span class="text-sm fw-medium">ABC12345</span>
+                </li>
+  
+                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                  <span class="text-sm fw-medium">Codigo de respuesta:</span>
+                  <span class="text-sm fw-medium">00</span>
+                </li>
+  
+                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                  <span class="text-sm fw-medium">Tipo tarjeta:</span>
+                  <span class="text-sm fw-medium">Debito</span>
+                </li>
+  
+                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                  <span class="text-sm fw-medium">Últ. dígitos tarjeta</span>
+                  <span class="text-sm fw-medium">xxxx-xxxx-xxxx-8752</span>
+                </li>
+  
+                <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                  <span class="text-sm fw-medium">Monto pagado:</span>
+                  <span class="text-sm fw-medium">$100000</span>
+                </li>
+              </div>
+            </div>
+             <!-- img forma -->
+             <!-- <img class="payment-forma" src="assets/img/forma/formar-2.svg" alt=""> -->
+          </div>
+
+          <button type="button" class="btn btn-dark mt-3" data-bs-dismiss="modal">Descargar comprobante</button>
+        </div>
+
+        <img class="modal-img" src="assets/img/forma/forma-3.svg" alt="">
+        <img class="modal-img-2" src="assets/img/forma/forma-3.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JS bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+    <!-- JS obtener el valor a pagar -->
+  <script src="assets/js/form.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const fecha = new Date();
+    const opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("fecha-actual").textContent = fecha.toLocaleDateString('es-ES', opcionesFecha);
+  });
+  </script>
+</body>
+
+</html>

@@ -40,31 +40,29 @@ body {
 }
 
 .text-primary {
-  --bs-text-opacity: 1;
   color: var(--bs-primary) !important;
 }
 
-.text-bg-primary {
-  color: #fff !important;
-  background-color: var(--bs-primary) !important;
-}
-
 .bg-primary {
-  --bs-bg-opacity: 1;
   background-color: var(--bs-primary) !important;
 }
 
 .bg-dusk-light {
-  --bs-bg-opacity: 1;
   background-color: var(--bs-gray-dusk-light) !important;
 }
 
 .text-sm {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .text-xs {
   font-size: 12px;
+}
+
+.justify-content-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #root {
@@ -98,7 +96,6 @@ header .header-img {
   width: 80%;
 }
 
-
 .app-title {
   margin-top: 250px;
   padding: 48px 16px;
@@ -110,6 +107,7 @@ header .header-img {
 
 main {
   grid-area: main-content;
+  padding-bottom: 48px;
 }
 
 /* Lista */
@@ -138,23 +136,8 @@ main {
 }
 
 /* Formulario */
-.payment-item:last-child {
-  display: flex;
-  justify-content: space-between;
-}
-
-.payment-item .payment-img {
-  width: 30%;
-  filter: brightness(0) invert(1);
-}
-
-.payment-item .payment-img img {
-  width: 100%;
-}
-
 .payment-detail {
   position: relative;
-
 }
 
 .payment-detail .payment-forma {
@@ -162,12 +145,6 @@ main {
   position: absolute;
   bottom: -5px;
   left: 0;
-}
-
-.disabled-payment {
-  opacity: 0.5;
-  pointer-events: none;
-  cursor: not-allowed;
 }
 
 .form-check-input:checked {
@@ -179,44 +156,6 @@ main {
 .form-check-input:active {
   outline: none;
   box-shadow: none;
-}
-
-
-/* Modal */
-
-.modal-content {
-  position: relative;
-  overflow: hidden;
-}
-
-
-/* .modal-body {
-
-  background-color: red;
-  margin: 0 auto;
-  z-index: 1;
-} */
-
-.modal-body .modal-logo {
-  width: 30%;
-  margin: 0 auto;
-
-}
-
-.modal-img {
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 40%;
-  z-index: 0;
-}
-
-.modal-img-2 {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  width: 20%;
-  z-index: 0;
 }
 
 /* VISTA TABLET */
@@ -233,23 +172,6 @@ main {
   .app-title .app-img {
     width: 16%;
   }
-
-  .modal-body .modal-logo {
-    width: 20%;
-  
-  }
-  
-  .modal-img {
-    top: -80px;
-    left: -80px;
-    width: 40%;
-  }
-  
-  .modal-img-2 {
-    bottom: -30px;
-    right: -30px;
-    width: 20%;
-  }
 }
 
 /* VISTA DESKTOP */
@@ -258,7 +180,7 @@ main {
     display: grid;
     grid-template-columns: 3fr 6fr;
     grid-template-areas:
-      "header nav"
+      "header main-content"
       "header main-content";
   }
 
@@ -297,27 +219,18 @@ main {
   }
 
   main {
-    grid-area: main-content;
-    height: calc(100vh - 72px);
+    height:100vh;
     overflow: auto;
   }
 
   .contenido {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 2fr;
     gap: 1rem;
   }
 
   .contenido-title {
     grid-column: 1 / -1;
-  }
-
-
-  .modal-body {
-    /* background-color: red; */
-    width: 80%;
-    margin: 0 auto;
-    z-index: 1;
   }
 }
 
@@ -336,11 +249,7 @@ main {
 /* VISTA DESKTOP XXL */
 @media (min-width: 1440px) {
   #root {
-    display: grid;
     grid-template-columns: 2fr 5fr;
-    grid-template-areas:
-      "header nav"
-      "header main-content";
   }
 
   .contenido {

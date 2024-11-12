@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment</title>
+  <title>Payment unipay</title>
   <!-- Reset Css -->
   <link rel="stylesheet" href="assets/css/Reboot.css">
   <!-- Bootstrap -->
@@ -23,13 +23,13 @@
 <body>
   <div id="root">
     <!-- nav -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <!-- <nav class="navbar navbar-expand-lg bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="assets/img/logos/normal.png" alt="logo unipay">
         </a>
       </div>
-    </nav>
+    </nav> -->
 
     <!-- header -->
     <header>
@@ -48,11 +48,9 @@
       <img class="header-img" src="assets/img/header/Mask group-5.png" alt="">
     </header>
 
-
     <main>
-      <div class="container contenido px-4">
-        <!-- Información del usuario -->
-        <div class="contenido-title mt-5 mt-md-4  mb-4">
+      <div class="container contenido px-4 pt-md-5">
+        <div class="contenido-title mt-5 mt-md-4 mb-4">
           <h2 class="fs-4 fw-light">
             Nombre del cliente: <span class="fw-bold">Alonso Trina</span>
           </h2>
@@ -150,21 +148,9 @@
               </ul>
 
               <!-- Call action -->
-              <div class="payment disabled-payment mt-5" id="payment">
-                <div class="payment-item mb-2">
-                  <h5 class="text-sm text-light fw-normal">Estas pagando con</h5>
-                </div>
-
-                <div class="payment-item ">
-                  <div class="payment-img">
-                    <img src="assets/img/logos/webpay-logo.png" alt="logo webplay">
-                  </div>
-     
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentSuccess" class="btn btn-primary fw-semibold">
-                    Pagar <span id="payment-total"></span>
-                  </button>
-                </div>
-              </div>
+              <a href="payment.html" target="_blank" id="payment" class="btn btn-primary fw-semibold disabled mt-4" role="button">
+                Ir a Pagar
+              </a>
            </form>
 
            <!-- img forma -->
@@ -194,7 +180,7 @@
             <!--Formulario -->
             <form class="my-5">
               <h5 class="fs-6 text-primary fw-bold mb-3">Seleccionar monto</h5>
-              <ul class="list-group select-payment mb-4">
+              <ul class="list-group select-payment">
                 <!-- total a pagar -->
                 <li class="list-group-item px-2">
                   <input class="form-check-input mt-0 me-2" type="radio" name="listGroupRadio" value="" id="firstRadio">
@@ -211,22 +197,9 @@
               </ul>
 
               <!-- Call action -->
-              <div class="payment disabled-payment mt-5" id="payment2">
-                <div class="payment-item mb-2">
-                  <h5 class="text-sm text-light fw-normal">Estas pagando con</h5>
-                </div>
-
-                <div class="payment-item ">
-                   <div class="payment-img">
-                    <img src="assets/img/logos/webpay-logo.png" alt="logo webplay">
-                   </div>
-                  
-
-                  <button type="submit" class="btn btn-primary fw-semibold">
-                    Pagar <span id="payment-total"></span>
-                  </button>
-                </div>
-              </div>
+              <a href="payment.html" target="_blank" class="btn btn-primary fw-semibold disabled mt-4" role="button">
+                Ir a Pagar
+              </a>
            </form>
 
             <!-- img forma -->
@@ -256,7 +229,7 @@
             <!--Formulario -->
             <form class="my-5">
               <h5 class="fs-6 text-primary fw-bold mb-3">Seleccionar monto</h5>
-              <ul class="list-group select-payment mb-4">
+              <ul class="list-group select-payment">
                 <!-- total a pagar -->
                 <li class="list-group-item px-2">
                   <input class="form-check-input mt-0 me-2" type="radio" name="listGroupRadio" value="" id="firstRadio">
@@ -273,22 +246,9 @@
               </ul>
 
               <!-- Call action -->
-              <div class="payment disabled-payment mt-5" id="payment3">
-                <div class="payment-item mb-2">
-                  <h5 class="text-sm text-light fw-normal">Estas pagando con</h5>
-                </div>
-
-                <div class="payment-item">
-                  <div class="payment-img">
-                    <img src="assets/img/logos/webpay-logo.png" alt="logo webplay">
-                  </div>
-                  
-
-                  <button type="submit" class="btn btn-primary fw-semibold">
-                    Pagar <span id="payment-total"></span>
-                  </button>
-                </div>
-              </div>
+              <a href="payment.html" target="_blank" class="btn btn-primary fw-semibold disabled mt-4" role="button">
+                Ir a Pagar
+              </a>
            </form>
 
             <!-- img forma -->
@@ -297,73 +257,6 @@
         </div>
       </div>
     </main>
-  </div>
-
-
-  <div class="modal fade" id="paymentSuccess" tabindex="-1" aria-labelledby="paymentSuccess" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-l">
-      <div class="modal-content bg-primary">
-        <div class="modal-header border-0">
-          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center mb-5">
-          <!-- logo-unipay -->
-          <img class="modal-logo mb-4" src="assets/img/logos/logo-unipay.png" alt="logo unipay">
-
-          <!-- <i class="bi bi-check-circle icon-success text-light"></i> -->
-          <h5 class="fs-5 fw-bold text-light mb-2">
-            ¡Pago realizado con éxito!
-          </h5>
-          <p class="fs-6 fw-normal text-light mb-4">
-            Tu pago se ha registrado correctamente. A continuación, puedes revisar los detalles.
-          </p>
-
-          <div class="select-payment rounded-2">
-            <div class="list-payment">
-              <div class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
-                  <span class="text-sm fw-medium">Número de transaccion:</span>
-                  <span class="text-sm fw-medium">123456789</span>
-                </li>
-  
-                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
-                  <span class="text-sm fw-medium">Codigo de autorizacion:</span>
-                  <span class="text-sm fw-medium">ABC12345</span>
-                </li>
-  
-                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
-                  <span class="text-sm fw-medium">Codigo de respuesta:</span>
-                  <span class="text-sm fw-medium">00</span>
-                </li>
-  
-                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
-                  <span class="text-sm fw-medium">Tipo tarjeta:</span>
-                  <span class="text-sm fw-medium">Debito</span>
-                </li>
-  
-                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
-                  <span class="text-sm fw-medium">Últ. dígitos tarjeta</span>
-                  <span class="text-sm fw-medium">xxxx-xxxx-xxxx-8752</span>
-                </li>
-  
-                <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
-                  <span class="text-sm fw-medium">Monto pagado:</span>
-                  <span class="text-sm fw-medium">$100000</span>
-                </li>
-              </div>
-            </div>
-             <!-- img forma -->
-             <!-- <img class="payment-forma" src="assets/img/forma/formar-2.svg" alt=""> -->
-          </div>
-
-          <button type="button" class="btn btn-dark mt-3" data-bs-dismiss="modal">Descargar comprobante</button>
-        </div>
-
-        <img class="modal-img" src="assets/img/forma/forma-3.svg" alt="">
-        <img class="modal-img-2" src="assets/img/forma/forma-3.svg" alt="">
-      </div>
-    </div>
   </div>
 
   <!-- JS bootstrap -->
