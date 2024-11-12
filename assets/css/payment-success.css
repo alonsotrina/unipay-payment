@@ -1,0 +1,42 @@
+
+.payment-succes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+
+.payment-succes .payment-icon {
+    font-size: 80px;
+}
+
+
+/* VISTA DESKTOP XL */
+@media (min-width: 992px) {
+    .payment-succes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .centered-div {
+        grid-column: 2 / 4;
+    }
+    
+}
+
+/* VISTA DESKTOP XL */
+@media (min-width: 1280px) {
+    .payment-item-img {
+        width: 80%;
+    }
+}
+
+
+/* VISTA DESKTOP XXL */
+@media (min-width: 1440px) {
+    .payment-item-img {
+        width: 55%;
+    }
+    .payment-methods {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

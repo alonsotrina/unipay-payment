@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deatil payment unipay</title>
+  <!-- Reset Css -->
+  <link rel="stylesheet" href="assets/css/Reboot.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Icons -->
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Css -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/button.css" />
+  <link rel="stylesheet" href="assets/css/payment.css" />
+</head>
+
+<body>
+  <div id="root">
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div class="app-title">
+          <h2 class="fs-4 fw-light mb-1">Resumen de Pago Seleccionado</h2>
+          <h3 class="fs-3 fw-bold mb-2">Selecciona y Organiza tus Deudas</h3>
+          <img class="app-img mt-3" src="assets/img/logos/logo-unipay.png" alt="">
+        </div>
+      </div>
+
+      <img class="header-img" src="assets/img/header/Mask group-5.png" alt="">
+    </header>
+
+
+    <main>
+      <div class="container contenido px-4 pt-md-5">
+        <div class="contenido-title mt-5 mt-md-4 mb-4">
+            <h2 class="fs-4 fw-semibold">
+              Información de la deuda seleccionada
+            </h2>
+            <h3 class="fs-6 fw-light mt-3">
+              A continuación, puedes revisar los detalles y gestionar el pago de la deuda que seleccionaste en UniPay:
+            </h3>
+            <p class="text-sm text-muted mt-2">
+              Fecha actual: <span id="fecha-actual"></span>
+            </p>
+        </div>
+
+        <!-- Listado de deudas -->
+        <div class="list-payment mb-5 mb-md-0">
+          <div class="list-group" id="list-tab" role="tablist">
+              <!-- 1 -->
+              <li class="list-group-item list-group-item justify-content-space-between py-3">  
+                <span class="fs-6 fw-semibold">Nombre del cliente</span>
+                <span class="fs-6">José martinez</span>
+              </li> 
+
+
+              <li class="list-group-item list-group-item justify-content-space-between py-3">  
+                <span class="text-sm fw-semibold">rut</span>
+                <span class="text-sm">12.567.890-8</span>
+              </li> 
+
+              <li class="list-group-item list-group-item justify-content-space-between py-3">  
+                <span class="fs-6 fw-semibold">N° Deuda</span>
+                <span class="fs-6">0000989</span>
+              </li> 
+
+
+              <li class="list-group-item justify-content-space-between py-3">  
+                <span class="text-sm fw-semibold">N° cuotas</span>
+                <span class="text-sm">4/7</span>
+              </li> 
+
+
+              <li class="list-group-item list-group-item justify-content-space-between py-3">  
+                <span class="text-sm fw-semibold">Pagar hasta el</span>
+                <span class="text-sm">23/11/2024</span>
+              </li> 
+
+
+              <li class="list-group-item list-group-item justify-content-space-between py-3">  
+                <span class="text-sm fw-semibold">Total a Pagar</span>
+                <span class="text-sm">$70.8990</span>
+              </li>
+          </div>
+
+          <h3 class="fs-5 fw-semibold mt-4 mb-3">Metodo de pago</h3>
+
+          <div class="payment-methods">
+            <div class="payment-item border rounded-3">
+              <img class="payment-item-img" src="assets/img/logos/webpay-logo.png" alt="logo webplay">
+            </div>
+            <!-- En caso futuro de agregar más medios de pagos -->
+            <!-- <div class="payment-item border rounded-3">
+              <img class="payment-item-img" src="assets/img/logos/otro/kipu.png" alt="logo webplay">
+            </div> 
+            <div class="payment-item border rounded-3">
+              <img class="payment-item-img" src="assets/img/logos/otro/Logotipo_MACH.svg" alt="logo webplay">
+            </div> 
+            <div class="payment-item border rounded-3">
+              <img class="payment-item-img" src="assets/img/logos/otro/mercado-pago-logo-vector-1-1280x600.png" alt="logo webplay">
+            </div>  -->
+          </div>
+        </div>
+
+        <!-- call action -->
+        <div class="payment-action border rounded-top py-5 py-md-0">
+          <img class="payment-img mb-4" src="assets/img/logos/normal.png" alt="logo unipay">
+          <p class="fs-6 text-light fw-bold">Total a pagar</p>
+          <p class="fs-1 text-light fw-bold mb-3">$70.8990</p>
+          <p class="fs-6 text-light fw-normal mb-3">Pagar hasta el 23/11/2024</p>
+          <a href="payment-succes.html" target="_blank" class="btn btn-primary fw-semibold  mt-4" role="button">
+            Pagar
+          </a>
+
+          <a href="index.html" class="text-light mt-4">
+            Cancelar pago
+          </a>
+        
+          <!-- img forma -->
+          <img class="payment-bottom" src="assets/img/forma/formar-2.svg" alt="">
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- JS bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+    <!-- JS obtener el valor a pagar -->
+  <script src="assets/js/form.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const fecha = new Date();
+    const opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("fecha-actual").textContent = fecha.toLocaleDateString('es-ES', opcionesFecha);
+  });
+  </script>
+</body>
+
+</html>
